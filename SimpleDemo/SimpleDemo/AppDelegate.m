@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,45 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+
+
+    ViewController *viewController = [[ViewController alloc] init];
+    viewController.tabBarItem.title = @"资讯";
+    viewController.tabBarItem.image = [UIImage imageNamed:@"page@2x"];
+    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"page_selected@2x"];
+    viewController.view.backgroundColor = [UIColor whiteColor];
+
+
+    ViewController *viewController1 = [[ViewController alloc] init];
+    viewController1.tabBarItem.title = @"视频";
+    viewController1.tabBarItem.image = [UIImage imageNamed:@"video@2x"];
+    viewController1.tabBarItem.selectedImage = [UIImage imageNamed:@"video_selected@2x"];
+    viewController1.view.backgroundColor = [UIColor redColor];
+
+    ViewController *viewController2 = [[ViewController alloc] init];
+    viewController2.tabBarItem.title = @"关注";
+    viewController2.tabBarItem.image = [UIImage imageNamed:@"like@2x"];
+    viewController2.tabBarItem.selectedImage = [UIImage imageNamed:@"like_selected@2x"];
+    viewController2.view.backgroundColor = [UIColor yellowColor];
+
+
+    ViewController *viewController3 = [[ViewController alloc] init];
+    viewController3.tabBarItem.title = @"我的";
+    viewController3.tabBarItem.image = [UIImage imageNamed:@"home@2x"];
+    viewController3.tabBarItem.selectedImage = [UIImage imageNamed:@"home_selected@2x"];
+    viewController3.view.backgroundColor = [UIColor blueColor];
+
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:@[viewController,viewController1,viewController2,viewController3]];
+
+    UINavigationController *navigationController = [[UINavigationController alloc] init];
+    navigationController.viewControllers = @[tabBarController];
+
+
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

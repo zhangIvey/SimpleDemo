@@ -14,6 +14,7 @@
 		75ADB92A239F72680095AE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB929239F72680095AE96 /* Assets.xcassets */; };
 		75ADB92D239F72680095AE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB92B239F72680095AE96 /* LaunchScreen.storyboard */; };
 		75ADB930239F72680095AE96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB92F239F72680095AE96 /* main.m */; };
+		75ADB937239F8B430095AE96 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB936239F8B3F0095AE96 /* icon.bundle */; };
 		F425C4764B6797E4B65F66D4 /* libPods-SimpleDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5AB084974AA242659A1EE1 /* libPods-SimpleDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		75ADB92C239F72680095AE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75ADB92E239F72680095AE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75ADB92F239F72680095AE96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75ADB936239F8B3F0095AE96 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
 		81BB733AEE03E09CC0E5485D /* Pods-SimpleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDemo/Pods-SimpleDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FB5AB084974AA242659A1EE1 /* libPods-SimpleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 		75ADB91C239F724C0095AE96 /* SimpleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				75ADB936239F8B3F0095AE96 /* icon.bundle */,
 				75ADB91D239F724C0095AE96 /* AppDelegate.h */,
 				75ADB91E239F724D0095AE96 /* AppDelegate.m */,
 				75ADB920239F724D0095AE96 /* SceneDelegate.h */,
@@ -158,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75ADB937239F8B430095AE96 /* icon.bundle in Resources */,
 				75ADB92D239F72680095AE96 /* LaunchScreen.storyboard in Resources */,
 				75ADB92A239F72680095AE96 /* Assets.xcassets in Resources */,
 				75ADB928239F724D0095AE96 /* Main.storyboard in Resources */,
