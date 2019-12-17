@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		759C5A6A23A89E680048C8DD /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759C5A6923A89E680048C8DD /* NewsViewController.m */; };
+		759C5A6D23A8A2A70048C8DD /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759C5A6C23A8A2A70048C8DD /* VideoViewController.m */; };
 		75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB91E239F724D0095AE96 /* AppDelegate.m */; };
 		75ADB922239F724D0095AE96 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB921239F724D0095AE96 /* SceneDelegate.m */; };
 		75ADB925239F724D0095AE96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB924239F724D0095AE96 /* ViewController.m */; };
@@ -20,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		2BB6308FDBEB342F8C59AD1D /* Pods-SimpleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDemo/Pods-SimpleDemo.release.xcconfig"; sourceTree = "<group>"; };
+		759C5A6823A89E680048C8DD /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		759C5A6923A89E680048C8DD /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		759C5A6B23A8A2A70048C8DD /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		759C5A6C23A8A2A70048C8DD /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		75ADB91A239F724C0095AE96 /* SimpleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75ADB91D239F724C0095AE96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		75ADB91E239F724D0095AE96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +87,10 @@
 				75ADB936239F8B3F0095AE96 /* icon.bundle */,
 				75ADB91D239F724C0095AE96 /* AppDelegate.h */,
 				75ADB91E239F724D0095AE96 /* AppDelegate.m */,
+				759C5A6823A89E680048C8DD /* NewsViewController.h */,
+				759C5A6923A89E680048C8DD /* NewsViewController.m */,
+				759C5A6B23A8A2A70048C8DD /* VideoViewController.h */,
+				759C5A6C23A8A2A70048C8DD /* VideoViewController.m */,
 				75ADB920239F724D0095AE96 /* SceneDelegate.h */,
 				75ADB921239F724D0095AE96 /* SceneDelegate.m */,
 				75ADB923239F724D0095AE96 /* ViewController.h */,
@@ -202,6 +212,8 @@
 			files = (
 				75ADB925239F724D0095AE96 /* ViewController.m in Sources */,
 				75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */,
+				759C5A6D23A8A2A70048C8DD /* VideoViewController.m in Sources */,
+				759C5A6A23A89E680048C8DD /* NewsViewController.m in Sources */,
 				75ADB930239F72680095AE96 /* main.m in Sources */,
 				75ADB922239F724D0095AE96 /* SceneDelegate.m in Sources */,
 			);

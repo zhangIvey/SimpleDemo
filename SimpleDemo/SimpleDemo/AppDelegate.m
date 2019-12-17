@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
+#import "NewsViewController.h"
+#import "VideoViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -23,19 +26,8 @@
 
 
 
-    ViewController *viewController = [[ViewController alloc] init];
-    viewController.tabBarItem.title = @"资讯";
-    viewController.tabBarItem.image = [UIImage imageNamed:@"page@2x"];
-    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"page_selected@2x"];
-    viewController.view.backgroundColor = [UIColor whiteColor];
-
-
-    ViewController *viewController1 = [[ViewController alloc] init];
-    viewController1.tabBarItem.title = @"视频";
-    viewController1.tabBarItem.image = [UIImage imageNamed:@"video@2x"];
-    viewController1.tabBarItem.selectedImage = [UIImage imageNamed:@"video_selected@2x"];
-    viewController1.view.backgroundColor = [UIColor redColor];
-
+    NewsViewController *viewController = [[NewsViewController alloc] init];
+    VideoViewController *viewController1 = [[VideoViewController alloc] init];
     ViewController *viewController2 = [[ViewController alloc] init];
     viewController2.tabBarItem.title = @"关注";
     viewController2.tabBarItem.image = [UIImage imageNamed:@"like@2x"];
