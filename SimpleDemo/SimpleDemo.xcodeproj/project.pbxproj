@@ -12,7 +12,6 @@
 		75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB91E239F724D0095AE96 /* AppDelegate.m */; };
 		75ADB922239F724D0095AE96 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB921239F724D0095AE96 /* SceneDelegate.m */; };
 		75ADB925239F724D0095AE96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB924239F724D0095AE96 /* ViewController.m */; };
-		75ADB928239F724D0095AE96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB926239F724D0095AE96 /* Main.storyboard */; };
 		75ADB92A239F72680095AE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB929239F72680095AE96 /* Assets.xcassets */; };
 		75ADB92D239F72680095AE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB92B239F72680095AE96 /* LaunchScreen.storyboard */; };
 		75ADB930239F72680095AE96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB92F239F72680095AE96 /* main.m */; };
@@ -33,7 +32,6 @@
 		75ADB921239F724D0095AE96 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		75ADB923239F724D0095AE96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		75ADB924239F724D0095AE96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		75ADB927239F724D0095AE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75ADB929239F72680095AE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75ADB92C239F72680095AE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75ADB92E239F72680095AE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				75ADB921239F724D0095AE96 /* SceneDelegate.m */,
 				75ADB923239F724D0095AE96 /* ViewController.h */,
 				75ADB924239F724D0095AE96 /* ViewController.m */,
-				75ADB926239F724D0095AE96 /* Main.storyboard */,
 				75ADB929239F72680095AE96 /* Assets.xcassets */,
 				75ADB92B239F72680095AE96 /* LaunchScreen.storyboard */,
 				75ADB92E239F72680095AE96 /* Info.plist */,
@@ -174,7 +171,6 @@
 				75ADB937239F8B430095AE96 /* icon.bundle in Resources */,
 				75ADB92D239F72680095AE96 /* LaunchScreen.storyboard in Resources */,
 				75ADB92A239F72680095AE96 /* Assets.xcassets in Resources */,
-				75ADB928239F724D0095AE96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,14 +218,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		75ADB926239F724D0095AE96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				75ADB927239F724D0095AE96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		75ADB92B239F72680095AE96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,10 +280,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = SimpleDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -345,9 +334,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = SimpleDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
