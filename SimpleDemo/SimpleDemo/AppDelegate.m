@@ -20,10 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-/*
+
     NewsViewController *viewController = [[NewsViewController alloc] init];
+    
     VideoViewController *viewController1 = [[VideoViewController alloc] init];
+    
     ViewController *viewController2 = [[ViewController alloc] init];
     viewController2.tabBarItem.title = @"关注";
     viewController2.tabBarItem.image = [UIImage imageNamed:@"like@2x"];
@@ -43,16 +44,19 @@
     UINavigationController *navigationController = [[UINavigationController alloc] init];
     navigationController.viewControllers = @[tabBarController];
     
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = navigationController;
- */
-    
-
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    window.rootViewController = [[ViewController alloc] init];
-    window.rootViewController.view.backgroundColor = [UIColor redColor];
-    self.window = window;
     [self.window makeKeyAndVisible];
-    return true;
+    return YES;
+    /*
+    UIViewController *rootVC = [[UIViewController alloc] init];
+    rootVC.view.backgroundColor = [UIColor redColor];
+    
+     
+    self.window.rootViewController = rootVC;
+    self.window.backgroundColor = [UIColor redColor];
+    [self.window makeKeyAndVisible];
+     */
     
 
 }
@@ -61,8 +65,25 @@
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions
 API_AVAILABLE(ios(13.0)){
     
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    [self.window setWindowScene:windowScene];
+    
+    //=== 根控制器的部署
+    
+    UIViewController *rootVC = [[UIViewController alloc] init];
+    rootVC.view.backgroundColor = [UIColor redColor];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+    [self.window setRootViewController:rootVC];
+    
+    //===
+    [self.window makeKeyAndVisible];
+     
 }
-*/
+ */
+
+
 
 
 #pragma mark - UISceneSession lifecycle
