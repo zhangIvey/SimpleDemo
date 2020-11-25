@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3AA43251256DFE2700F83CD3 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */; };
 		3AA43255256E2F2A00F83CD3 /* RecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */; };
+		3AA43259256E47BE00F83CD3 /* NiewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43258256E47BE00F83CD3 /* NiewsTableViewCell.m */; };
 		759C5A6A23A89E680048C8DD /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759C5A6923A89E680048C8DD /* NewsViewController.m */; };
 		759C5A6D23A8A2A70048C8DD /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759C5A6C23A8A2A70048C8DD /* VideoViewController.m */; };
 		75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB91E239F724D0095AE96 /* AppDelegate.m */; };
@@ -27,6 +28,8 @@
 		3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		3AA43253256E2F2A00F83CD3 /* RecommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommandViewController.h; sourceTree = "<group>"; };
 		3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommandViewController.m; sourceTree = "<group>"; };
+		3AA43257256E47BE00F83CD3 /* NiewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiewsTableViewCell.h; sourceTree = "<group>"; };
+		3AA43258256E47BE00F83CD3 /* NiewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NiewsTableViewCell.m; sourceTree = "<group>"; };
 		759C5A6823A89E680048C8DD /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		759C5A6923A89E680048C8DD /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		759C5A6B23A8A2A70048C8DD /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				75ADB91E239F724D0095AE96 /* AppDelegate.m */,
 				759C5A6823A89E680048C8DD /* NewsViewController.h */,
 				759C5A6923A89E680048C8DD /* NewsViewController.m */,
+				3AA43257256E47BE00F83CD3 /* NiewsTableViewCell.h */,
+				3AA43258256E47BE00F83CD3 /* NiewsTableViewCell.m */,
 				3AA4324F256DFE2700F83CD3 /* NewsDetailViewController.h */,
 				3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */,
 				759C5A6B23A8A2A70048C8DD /* VideoViewController.h */,
@@ -217,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75ADB925239F724D0095AE96 /* ViewController.m in Sources */,
+				3AA43259256E47BE00F83CD3 /* NiewsTableViewCell.m in Sources */,
 				3AA43255256E2F2A00F83CD3 /* RecommandViewController.m in Sources */,
 				3AA43251256DFE2700F83CD3 /* NewsDetailViewController.m in Sources */,
 				75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "NewsViewController.h"
 #import "NewsDetailViewController.h"
+#import "NiewsTableViewCell.h"
 
 @interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -39,16 +40,16 @@
 }
 
 #pragma mark tableView's delegate
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    cell.textLabel.text = [NSString stringWithFormat:@"新闻 - %@",@(indexPath.row)];
-    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"新闻副标题 - %@",@(indexPath.row)];
-}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    cell.textLabel.text = [NSString stringWithFormat:@"新闻 - %@",@(indexPath.row)];
+//    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+//    cell.detailTextLabel.text = [NSString stringWithFormat:@"新闻副标题 - %@",@(indexPath.row)];
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+    return 100;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,11 +66,11 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell"];
+    NiewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"newsCell"];
+        cell = [[NiewsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"newsCell"];
     }
-    
+    [cell layoutCell];
     return cell;
 }
 
