@@ -15,6 +15,8 @@
 @property(nonatomic, strong, readwrite) UILabel *commentLabel;
 @property(nonatomic, strong, readwrite) UILabel *timeLabel;
 
+@property(nonatomic, strong, readwrite) UIImageView *rightImageView;
+
 @end
 
 @implementation NiewsTableViewCell
@@ -57,6 +59,13 @@
             self.timeLabel;
         })];
         
+        [self addSubview:({
+            self.rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.titleLabel.frame.size.width + self.titleLabel.frame.origin.x + 20, self.titleLabel.frame.origin.y, 70, 70)];
+            self.rightImageView.backgroundColor = [UIColor systemPinkColor];
+//            self.rightImageView.contentMode = UIViewContentModeScaleAspectFill;
+            self.rightImageView;
+        })];
+        
     }
     return self;
 }
@@ -76,6 +85,8 @@
     self.timeLabel.text = @"发布时间";
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.size.width + self.commentLabel.frame.origin.x + 15, self.commentLabel.frame.origin.y, 20, 20);
     [self.timeLabel sizeToFit];
+    
+    self.rightImageView.image = [UIImage imageNamed:@"icon.bundle/animal.png"];
     
 }
 
