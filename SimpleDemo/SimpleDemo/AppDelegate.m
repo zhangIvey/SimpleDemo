@@ -11,6 +11,7 @@
 
 #import "NewsViewController.h"
 #import "VideoViewController.h"
+#import "RecommandViewController.h"
 
 @interface AppDelegate ()<UISceneDelegate>
 
@@ -25,17 +26,13 @@
     
     VideoViewController *viewController1 = [[VideoViewController alloc] init];
     
-    ViewController *viewController2 = [[ViewController alloc] init];
-    viewController2.tabBarItem.title = @"关注";
-    viewController2.tabBarItem.image = [UIImage imageNamed:@"like@2x"];
-    viewController2.tabBarItem.selectedImage = [UIImage imageNamed:@"like_selected@2x"];
-    viewController2.view.backgroundColor = [UIColor yellowColor];
-
+    
+    RecommandViewController *viewController2 = [[RecommandViewController alloc] init];
 
     ViewController *viewController3 = [[ViewController alloc] init];
     viewController3.tabBarItem.title = @"我的";
-    viewController3.tabBarItem.image = [UIImage imageNamed:@"home@2x"];
-    viewController3.tabBarItem.selectedImage = [UIImage imageNamed:@"home_selected@2x"];
+    viewController3.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x"];
+    viewController3.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x"];
     viewController3.view.backgroundColor = [UIColor blueColor];
 
     UITabBarController *tabBarController = [[UITabBarController alloc] init];

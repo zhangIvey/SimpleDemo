@@ -8,7 +8,7 @@
 
 #import "VideoViewController.h"
 
-@interface VideoViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface VideoViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -19,9 +19,8 @@
     self = [super init];
     if (self) {
         self.tabBarItem.title = @"视频";
-        self.tabBarItem.image = [UIImage imageNamed:@"video@2x"];
-        self.tabBarItem.selectedImage = [UIImage imageNamed:@"video_selected@2x"];
-        self.view.backgroundColor = [UIColor redColor];
+        self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x"];
     }
     return self;
 }
@@ -29,18 +28,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self.view addSubview:({
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.minimumLineSpacing = 20;
         flowLayout.minimumInteritemSpacing = 20;
+        flowLayout.itemSize = CGSizeMake((self.view.bounds.size.width-20)/2, 300);
 
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+        collectionView.backgroundColor = [UIColor whiteColor];
         collectionView.delegate = self;
         collectionView.dataSource = self;
         [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"videoCell"];
-
         collectionView;
     })];
+    
 }
 
 
@@ -49,15 +51,30 @@
 {
     return 20;
 }
+
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"videoCell" forIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"videoCell" forIndexPath:indexPath];
     if (!cell) {
-        cell = [[UICollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        cell = [[UICollectionViewCell alloc] init];
     }
+    cell.backgroundColor = [UIColor redColor];
+    
 
     return cell;
 }
+
+#pragma mark -UICollectionViewDelegateFlowLayout's methods
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row%3 == 0) {
+        return CGSizeMake(self.view.bounds.size.width,100);
+
+    }
+    return CGSizeMake((self.view.bounds.size.width-20)/2, 300);
+}
+
+
 #pragma mark  - collectionView's delegate methods
 
 -(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath

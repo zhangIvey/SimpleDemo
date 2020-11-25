@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA43251256DFE2700F83CD3 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */; };
+		3AA43255256E2F2A00F83CD3 /* RecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */; };
 		759C5A6A23A89E680048C8DD /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759C5A6923A89E680048C8DD /* NewsViewController.m */; };
 		759C5A6D23A8A2A70048C8DD /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759C5A6C23A8A2A70048C8DD /* VideoViewController.m */; };
 		75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB91E239F724D0095AE96 /* AppDelegate.m */; };
@@ -21,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		2BB6308FDBEB342F8C59AD1D /* Pods-SimpleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDemo/Pods-SimpleDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3AA4324F256DFE2700F83CD3 /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		3AA43253256E2F2A00F83CD3 /* RecommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommandViewController.h; sourceTree = "<group>"; };
+		3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommandViewController.m; sourceTree = "<group>"; };
 		759C5A6823A89E680048C8DD /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		759C5A6923A89E680048C8DD /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		759C5A6B23A8A2A70048C8DD /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -87,8 +93,12 @@
 				75ADB91E239F724D0095AE96 /* AppDelegate.m */,
 				759C5A6823A89E680048C8DD /* NewsViewController.h */,
 				759C5A6923A89E680048C8DD /* NewsViewController.m */,
+				3AA4324F256DFE2700F83CD3 /* NewsDetailViewController.h */,
+				3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */,
 				759C5A6B23A8A2A70048C8DD /* VideoViewController.h */,
 				759C5A6C23A8A2A70048C8DD /* VideoViewController.m */,
+				3AA43253256E2F2A00F83CD3 /* RecommandViewController.h */,
+				3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */,
 				75ADB920239F724D0095AE96 /* SceneDelegate.h */,
 				75ADB921239F724D0095AE96 /* SceneDelegate.m */,
 				75ADB923239F724D0095AE96 /* ViewController.h */,
@@ -207,6 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				75ADB925239F724D0095AE96 /* ViewController.m in Sources */,
+				3AA43255256E2F2A00F83CD3 /* RecommandViewController.m in Sources */,
+				3AA43251256DFE2700F83CD3 /* NewsDetailViewController.m in Sources */,
 				75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */,
 				759C5A6D23A8A2A70048C8DD /* VideoViewController.m in Sources */,
 				759C5A6A23A89E680048C8DD /* NewsViewController.m in Sources */,
@@ -280,7 +292,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = SimpleDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -334,7 +346,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = SimpleDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-ObjC";
