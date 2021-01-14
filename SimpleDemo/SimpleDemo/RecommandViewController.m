@@ -8,7 +8,7 @@
 
 #import "RecommandViewController.h"
 
-@interface RecommandViewController ()<UIScrollViewDelegate>
+@interface RecommandViewController ()<UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
 @end
 
@@ -42,12 +42,40 @@
             [scrollView addSubview:({
                 UIView *view = [[UIView alloc] initWithFrame:CGRectMake(scrollView.bounds.size.width * i, 0, scrollView.bounds.size.width, scrollView.bounds.size.height)];
                 view.backgroundColor = colors[i];
+                
+                [view addSubview:({
+                    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+                    subView.backgroundColor = [UIColor blackColor];
+                    // 添加手势
+                    
+                    [subView addGestureRecognizer:({
+                        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickBlackView)];
+                        tapGesture.delegate = self;
+                        tapGesture;
+                    })];
+                    
+                    subView;
+                })];
+                
                 view;
             })];
         }
         
         scrollView;
     })];
+}
+
+#pragma mark - UIGestureRecognizerDelegate's methods
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    return YES;
+}
+
+
+#pragma mark - custom's methods
+- (void)clickBlackView
+{
+    NSLog(@"clickBlackView");
 }
 
 #pragma mark - UIScrollViewDelegate's methods

@@ -9,8 +9,13 @@
 #import "NewsViewController.h"
 #import "NewsDetailViewController.h"
 #import "NiewsTableViewCell.h"
+#import "FCview.h"
 
-@interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource, NiewsTableViewCellDelegate>
+
+@property(nonatomic, strong, readwrite) UITableView *tableView;
+@property(nonatomic, strong, readwrite) NSMutableArray *dataArray;
 
 @end
 
@@ -25,6 +30,11 @@
         self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x"];
         self.view.backgroundColor = [UIColor whiteColor];
+        
+        _dataArray = [[NSMutableArray alloc] initWithCapacity:20];
+        for (int i = 0; i < 20; i++) {
+            [_dataArray addObject:[NSNumber numberWithInt:i]];
+        }
     }
     return self;
 }
@@ -32,45 +42,73 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:({
-        UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        tableView;
+       self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        
+        self.tableView;
     })];
+    
+}
+
+#pragma mark - NiewsTableViewCellDelegate's delegate
+- (void)clickedCell:(UITableViewCell *)cell WithButton:(UIButton *)deletaButton
+{
+    NSLog(@"添加视图显示");
+    
+    CGPoint point = [cell convertPoint:deletaButton.center toView:self.view];
+    
+    FCview *view = [[FCview alloc] initWithFrame:self.view.bounds];
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    
+    __weak typeof(self) wself = self;
+    
+    [view showFCviewFromInitPoint:point WithClickedBlock:^(){
+        NSLog(@"执行我想要执行的");
+        __strong typeof(wself) strongself = wself;
+        [strongself.dataArray removeObjectAtIndex:indexPath.row];
+        [strongself.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+        
+    }];
+    
 }
 
 #pragma mark tableView's delegate
-//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    cell.textLabel.text = [NSString stringWithFormat:@"新闻 - %@",@(indexPath.row)];
-//    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"新闻副标题 - %@",@(indexPath.row)];
-//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
 }
 
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     NewsDetailViewController *detailViewController = [[NewsDetailViewController alloc] init];
-    detailViewController.title = [NSString stringWithFormat:@"文章- %@",@(indexPath.row)];
+//    detailViewController.title = [NSString stringWithFormat:@"文章- %@",@(indexPath.row)];
     [self.navigationController pushViewController:detailViewController animated:YES];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelected:NO];
 }
+
 
 #pragma mark tableView's dataSource
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.dataArray.count;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NiewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell"];
+    
     if (!cell) {
         cell = [[NiewsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"newsCell"];
+        cell.delegate = self;
     }
     [cell layoutCell];
+   
     return cell;
 }
 
