@@ -6,9 +6,9 @@
 //  Copyright © 2020 zz. All rights reserved.
 //
 
-#import "NiewsTableViewCell.h"
+#import "NewsTableViewCell.h"
 
-@interface  NiewsTableViewCell()
+@interface  NewsTableViewCell()
 
 @property(nonatomic, strong, readwrite) UILabel *titleLabel;
 @property(nonatomic, strong, readwrite) UILabel *sourceLabel;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation NiewsTableViewCell
+@implementation NewsTableViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier
 {

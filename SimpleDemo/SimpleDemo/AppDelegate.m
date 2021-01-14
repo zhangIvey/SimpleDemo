@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "MineHomeViewController.h"
 
 #import "NewsViewController.h"
 #import "VideoViewController.h"
@@ -22,21 +22,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    NewsViewController *viewController = [[NewsViewController alloc] init];
+    NewsViewController *newsViewController = [[NewsViewController alloc] init];
     
-    VideoViewController *viewController1 = [[VideoViewController alloc] init];
+    VideoViewController *videoViewController = [[VideoViewController alloc] init];
     
     
-    RecommandViewController *viewController2 = [[RecommandViewController alloc] init];
+    RecommandViewController *recommandViewController = [[RecommandViewController alloc] init];
 
-    ViewController *viewController3 = [[ViewController alloc] init];
-    viewController3.tabBarItem.title = @"我的";
-    viewController3.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x"];
-    viewController3.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x"];
-    viewController3.view.backgroundColor = [UIColor blueColor];
+    MineHomeViewController *mineHomeViewController = [[MineHomeViewController alloc] init];
+    mineHomeViewController.tabBarItem.title = @"我的";
+    mineHomeViewController.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x"];
+    mineHomeViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x"];
+    mineHomeViewController.view.backgroundColor = [UIColor blueColor];
 
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    [tabBarController setViewControllers:@[viewController,viewController1,viewController2,viewController3]];
+    [tabBarController setViewControllers:@[newsViewController,videoViewController,recommandViewController,mineHomeViewController]];
 
     UINavigationController *navigationController = [[UINavigationController alloc] init];
     navigationController.viewControllers = @[tabBarController];

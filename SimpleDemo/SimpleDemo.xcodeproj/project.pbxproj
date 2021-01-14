@@ -10,12 +10,12 @@
 		3A3563B72575CF4700B38AD1 /* FCview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3563B62575CF4700B38AD1 /* FCview.m */; };
 		3AA43251256DFE2700F83CD3 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */; };
 		3AA43255256E2F2A00F83CD3 /* RecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */; };
-		3AA43259256E47BE00F83CD3 /* NiewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43258256E47BE00F83CD3 /* NiewsTableViewCell.m */; };
+		3AA43259256E47BE00F83CD3 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43258256E47BE00F83CD3 /* NewsTableViewCell.m */; };
 		759C5A6A23A89E680048C8DD /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759C5A6923A89E680048C8DD /* NewsViewController.m */; };
 		759C5A6D23A8A2A70048C8DD /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759C5A6C23A8A2A70048C8DD /* VideoViewController.m */; };
 		75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB91E239F724D0095AE96 /* AppDelegate.m */; };
 		75ADB922239F724D0095AE96 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB921239F724D0095AE96 /* SceneDelegate.m */; };
-		75ADB925239F724D0095AE96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB924239F724D0095AE96 /* ViewController.m */; };
+		75ADB925239F724D0095AE96 /* MineHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB924239F724D0095AE96 /* MineHomeViewController.m */; };
 		75ADB92A239F72680095AE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB929239F72680095AE96 /* Assets.xcassets */; };
 		75ADB92D239F72680095AE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB92B239F72680095AE96 /* LaunchScreen.storyboard */; };
 		75ADB930239F72680095AE96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB92F239F72680095AE96 /* main.m */; };
@@ -31,8 +31,8 @@
 		3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		3AA43253256E2F2A00F83CD3 /* RecommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommandViewController.h; sourceTree = "<group>"; };
 		3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommandViewController.m; sourceTree = "<group>"; };
-		3AA43257256E47BE00F83CD3 /* NiewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiewsTableViewCell.h; sourceTree = "<group>"; };
-		3AA43258256E47BE00F83CD3 /* NiewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NiewsTableViewCell.m; sourceTree = "<group>"; };
+		3AA43257256E47BE00F83CD3 /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		3AA43258256E47BE00F83CD3 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		759C5A6823A89E680048C8DD /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		759C5A6923A89E680048C8DD /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		759C5A6B23A8A2A70048C8DD /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -42,8 +42,8 @@
 		75ADB91E239F724D0095AE96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		75ADB920239F724D0095AE96 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		75ADB921239F724D0095AE96 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		75ADB923239F724D0095AE96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		75ADB924239F724D0095AE96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		75ADB923239F724D0095AE96 /* MineHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHomeViewController.h; sourceTree = "<group>"; };
+		75ADB924239F724D0095AE96 /* MineHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHomeViewController.m; sourceTree = "<group>"; };
 		75ADB929239F72680095AE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75ADB92C239F72680095AE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75ADB92E239F72680095AE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +65,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A33972E25B0264C0038245C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				759C5A6823A89E680048C8DD /* NewsViewController.h */,
+				759C5A6923A89E680048C8DD /* NewsViewController.m */,
+				3AA43257256E47BE00F83CD3 /* NewsTableViewCell.h */,
+				3AA43258256E47BE00F83CD3 /* NewsTableViewCell.m */,
+				3A3563B52575CF4700B38AD1 /* FCview.h */,
+				3A3563B62575CF4700B38AD1 /* FCview.m */,
+				3AA4324F256DFE2700F83CD3 /* NewsDetailViewController.h */,
+				3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		3A33972F25B0266C0038245C /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				759C5A6B23A8A2A70048C8DD /* VideoViewController.h */,
+				759C5A6C23A8A2A70048C8DD /* VideoViewController.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		3A33973025B026800038245C /* Recommand */ = {
+			isa = PBXGroup;
+			children = (
+				3AA43253256E2F2A00F83CD3 /* RecommandViewController.h */,
+				3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */,
+			);
+			path = Recommand;
+			sourceTree = "<group>";
+		};
+		3A33973225B026F80038245C /* MineHome */ = {
+			isa = PBXGroup;
+			children = (
+				75ADB923239F724D0095AE96 /* MineHomeViewController.h */,
+				75ADB924239F724D0095AE96 /* MineHomeViewController.m */,
+			);
+			path = MineHome;
+			sourceTree = "<group>";
+		};
 		6B5BA427B2B93A1A43E6BA6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,25 +136,15 @@
 		75ADB91C239F724C0095AE96 /* SimpleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3A33973225B026F80038245C /* MineHome */,
+				3A33973025B026800038245C /* Recommand */,
+				3A33972F25B0266C0038245C /* Video */,
+				3A33972E25B0264C0038245C /* News */,
 				75ADB936239F8B3F0095AE96 /* icon.bundle */,
 				75ADB91D239F724C0095AE96 /* AppDelegate.h */,
 				75ADB91E239F724D0095AE96 /* AppDelegate.m */,
-				759C5A6823A89E680048C8DD /* NewsViewController.h */,
-				759C5A6923A89E680048C8DD /* NewsViewController.m */,
-				3AA43257256E47BE00F83CD3 /* NiewsTableViewCell.h */,
-				3AA43258256E47BE00F83CD3 /* NiewsTableViewCell.m */,
-				3A3563B52575CF4700B38AD1 /* FCview.h */,
-				3A3563B62575CF4700B38AD1 /* FCview.m */,
-				3AA4324F256DFE2700F83CD3 /* NewsDetailViewController.h */,
-				3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */,
-				759C5A6B23A8A2A70048C8DD /* VideoViewController.h */,
-				759C5A6C23A8A2A70048C8DD /* VideoViewController.m */,
-				3AA43253256E2F2A00F83CD3 /* RecommandViewController.h */,
-				3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */,
 				75ADB920239F724D0095AE96 /* SceneDelegate.h */,
 				75ADB921239F724D0095AE96 /* SceneDelegate.m */,
-				75ADB923239F724D0095AE96 /* ViewController.h */,
-				75ADB924239F724D0095AE96 /* ViewController.m */,
 				75ADB929239F72680095AE96 /* Assets.xcassets */,
 				75ADB92B239F72680095AE96 /* LaunchScreen.storyboard */,
 				75ADB92E239F72680095AE96 /* Info.plist */,
@@ -226,8 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75ADB925239F724D0095AE96 /* ViewController.m in Sources */,
-				3AA43259256E47BE00F83CD3 /* NiewsTableViewCell.m in Sources */,
+				75ADB925239F724D0095AE96 /* MineHomeViewController.m in Sources */,
+				3AA43259256E47BE00F83CD3 /* NewsTableViewCell.m in Sources */,
 				3AA43255256E2F2A00F83CD3 /* RecommandViewController.m in Sources */,
 				3AA43251256DFE2700F83CD3 /* NewsDetailViewController.m in Sources */,
 				75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */,

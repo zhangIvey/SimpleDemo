@@ -6,13 +6,13 @@
 //  Copyright © 2019 zz. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MineHomeViewController.h"
 
-@interface ViewController ()
+@interface MineHomeViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MineHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

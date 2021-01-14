@@ -8,7 +8,7 @@
 
 #import "NewsViewController.h"
 #import "NewsDetailViewController.h"
-#import "NiewsTableViewCell.h"
+#import "NewsTableViewCell.h"
 #import "FCview.h"
 
 
@@ -101,10 +101,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NiewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell"];
+    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell"];
     
     if (!cell) {
-        cell = [[NiewsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"newsCell"];
+        cell = [[NewsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"newsCell"];
         cell.delegate = self;
     }
     [cell layoutCell];

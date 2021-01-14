@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface NiewsTableViewCell : UITableViewCell
+@interface NewsTableViewCell : UITableViewCell
 @property(nonatomic, weak, readwrite) id<NiewsTableViewCellDelegate> delegate;
 
 - (void)layoutCell;
