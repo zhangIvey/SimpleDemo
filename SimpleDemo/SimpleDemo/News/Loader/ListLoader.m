@@ -7,19 +7,34 @@
 //
 
 #import "ListLoader.h"
+#import <AFNetworking/AFNetworking.h>
 
 @implementation ListLoader
 
 - (void)loadData
 {
-    NSURL *url = [NSURL URLWithString:@"https://static001.geekbang.org/univer/classes/ios_dev/lession/45/toutiao.json"];
+    NSString *urlString = @"https://static001.geekbang.org/univer/classes/ios_dev/lession/45/toutiao.json";
+//    NSURL *url = [NSURL URLWithString:urlString];
     
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    
+    [[AFHTTPSessionManager manager] GET:urlString
+    parameters:nil
+    headers:nil
+    progress:nil
+    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"");
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"");
     }];
-
-    [dataTask resume];
+    
+    
+    
+//    NSURLSession *session = [NSURLSession sharedSession];
+//    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        NSLog(@"");
+//    }];
+//
+//    [dataTask resume];
     
 }
 
