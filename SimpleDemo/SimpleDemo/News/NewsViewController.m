@@ -10,12 +10,14 @@
 #import "NewsDetailViewController.h"
 #import "NewsTableViewCell.h"
 #import "FCview.h"
+#import "ListLoader.h"
 
 
 @interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource, NiewsTableViewCellDelegate>
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
 @property(nonatomic, strong, readwrite) NSMutableArray *dataArray;
+@property(nonatomic, strong, readwrite) ListLoader *loader;
 
 @end
 
@@ -48,6 +50,9 @@
         
         self.tableView;
     })];
+    
+    self.loader = [[ListLoader alloc] init];
+    [self.loader loadData];
     
 }
 

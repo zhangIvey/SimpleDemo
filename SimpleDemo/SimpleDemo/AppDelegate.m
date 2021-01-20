@@ -45,17 +45,7 @@
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
-    /*
-    UIViewController *rootVC = [[UIViewController alloc] init];
-    rootVC.view.backgroundColor = [UIColor redColor];
     
-     
-    self.window.rootViewController = rootVC;
-    self.window.backgroundColor = [UIColor redColor];
-    [self.window makeKeyAndVisible];
-     */
-    
-
 }
 /*
 #pragma mark - UISceneDelegate delegate methods
