@@ -33,10 +33,6 @@
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x"];
         self.view.backgroundColor = [UIColor whiteColor];
         
-        _dataArray = [[NSMutableArray alloc] initWithCapacity:20];
-        for (int i = 0; i < 20; i++) {
-            [_dataArray addObject:[NSNumber numberWithInt:i]];
-        }
     }
     return self;
 }
@@ -52,7 +48,13 @@
     })];
     
     self.loader = [[ListLoader alloc] init];
-    [self.loader loadData];
+    
+    __weak typeof(self) wself = self;
+    [self.loader loadDataWithFinishBlock:^(BOOL success, NSArray * _Nonnull infoArray) {
+        __strong typeof(self) strongSelf  = wself;
+        strongSelf.dataArray =(NSMutableArray *)infoArray;
+        [strongSelf.tableView reloadData];
+    }];
     
 }
 
@@ -112,7 +114,7 @@
         cell = [[NewsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"newsCell"];
         cell.delegate = self;
     }
-    [cell layoutCell];
+    [cell layoutCellWithModel:[self.dataArray objectAtIndex:indexPath.row]];
    
     return cell;
 }

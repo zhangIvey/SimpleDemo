@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class NewsModel;
 NS_ASSUME_NONNULL_BEGIN
-
+typedef void(^LoadListFinishBlock)(BOOL success, NSArray *infoArray);
 /// 列表页加载器
 @interface ListLoader : NSObject
 
-- (void)loadData;
+- (void)loadDataWithFinishBlock:(LoadListFinishBlock) finishBlock;
 @end
 
 NS_ASSUME_NONNULL_END

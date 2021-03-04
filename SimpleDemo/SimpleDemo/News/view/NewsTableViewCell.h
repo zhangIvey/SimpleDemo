@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class NewsModel;
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol NiewsTableViewCellDelegate <NSObject>
@@ -19,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NewsTableViewCell : UITableViewCell
 @property(nonatomic, weak, readwrite) id<NiewsTableViewCellDelegate> delegate;
 
-- (void)layoutCell;
+- (void)layoutCellWithModel:(NewsModel *)model;
 
 @end
 
