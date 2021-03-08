@@ -11,6 +11,7 @@
 #import "NewsTableViewCell.h"
 #import "FCview.h"
 #import "ListLoader.h"
+#import "NewsModel.h"
 
 
 @interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource, NiewsTableViewCellDelegate>
@@ -93,8 +94,11 @@
 {
     
     NewsDetailViewController *detailViewController = [[NewsDetailViewController alloc] init];
-//    detailViewController.title = [NSString stringWithFormat:@"文章- %@",@(indexPath.row)];
+    NewsModel *model = (NewsModel *)[self.dataArray objectAtIndex:indexPath.row];
+    detailViewController.title = model.title;
+    detailViewController.URLString = model.url;
     [self.navigationController pushViewController:detailViewController animated:YES];
+    
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [cell setSelected:NO];
 }

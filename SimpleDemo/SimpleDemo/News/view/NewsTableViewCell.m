@@ -103,12 +103,8 @@
     
     
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
-    NSLog(@"url = %@",model.thumbnail_pic_s);
     self.rightImageView.image = image;
-    
-    
-    
-    
+
 }
 
 //-(void)clickButton

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NewsDetailViewController : UIViewController
 
+@property(nonatomic, copy, readwrite) NSString *URLString;
+
 @end
 
 NS_ASSUME_NONNULL_END

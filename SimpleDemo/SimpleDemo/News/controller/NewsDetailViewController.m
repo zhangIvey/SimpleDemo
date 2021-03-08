@@ -45,7 +45,8 @@
         self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
         self.webView.navigationDelegate = self;
         [self.webView loadRequest:({
-            NSURL *url = [NSURL URLWithString:@"https://www.csdn.net/?spm=1011.2124.3001.4476"];
+//            NSURL *url = [NSURL URLWithString:@"https://www.csdn.net/?spm=1011.2124.3001.4476"];
+            NSURL *url = [NSURL URLWithString:self.URLString];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             request;
             

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 新闻列表页，单条新闻的model
-@interface NewsModel : NSObject
+@interface NewsModel : NSObject <NSSecureCoding>
 
 @property(nonatomic, copy, readwrite) NSString *title;
 @property(nonatomic, copy, readwrite) NSString *category;
