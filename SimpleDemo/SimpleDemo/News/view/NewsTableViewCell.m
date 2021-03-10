@@ -8,6 +8,7 @@
 
 #import "NewsTableViewCell.h"
 #import "NewsModel.h"
+#import <SDWebImage/SDWebImage.h>
 
 @interface  NewsTableViewCell()
 
@@ -100,11 +101,65 @@
     self.timeLabel.text = model.date;
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.size.width + self.commentLabel.frame.origin.x + 15, self.commentLabel.frame.origin.y, 20, 20);
     [self.timeLabel sizeToFit];
-    
-    
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
-    self.rightImageView.image = image;
 
+
+//    ============================================
+//    NSThread 线程管理
+//    NSThread *imageDownloadThread = [[NSThread alloc] initWithBlock:^{
+//            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
+//            self.rightImageView.image = image;
+//        }];
+//    [imageDownloadThread start];
+    
+    
+    
+//    ============================================
+//    GCD 线程管理
+//    // 获取非主线程队列
+//    dispatch_queue_global_t imageDownloadQuese = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    //异步开启线程执行
+//    dispatch_async(imageDownloadQuese, ^{
+//        // 将业务逻辑添加到队列中
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
+//
+//        //获取主线程
+//        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+//        dispatch_async(mainQueue, ^{
+//            self.rightImageView.image = image;//主线程队列中进行UI的操作。
+//        });
+//    });
+    
+    
+    
+//    =======================================
+//    NSOperation 线程管理
+    // 获取线程队列
+//    NSOperationQueue *imageLoadQueue = [[NSOperationQueue alloc] init];
+//    imageLoadQueue.name = @"imageLoadQueue";
+//    // 创建一个线程 ，创建的业务逻辑添加到一个线程里
+//    NSBlockOperation *blockOperation = [[NSBlockOperation alloc] init];
+//    [blockOperation addExecutionBlock:^{
+//        NSLog(@"1---%@", [NSThread currentThread]); // 打印当前线程
+//        sleep(3);
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
+//
+//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//            NSLog(@"2---%@", [NSThread currentThread]);
+//            self.rightImageView.image = image;//主线程队列中进行UI的操作。
+//        }];
+//    }];
+//    // 把线程放到线程队列里
+//    [imageLoadQueue addOperation:blockOperation];
+//  警告：不要即把操作添加到操作队列中，又调用操作的start方法，这样是不允许的！否则运行时直接报错。
+
+    
+    
+//    ============================================
+//    常使用的第三方框架 SDWebImage
+    [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:model.thumbnail_pic_s] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        
+    }];
+    
 }
 
 //-(void)clickButton

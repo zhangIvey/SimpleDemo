@@ -30,9 +30,7 @@
     
     if (localItemArray) {
         //回到主线程
-//        __weak typeof(localItemArray) wLocalItemArray = localItemArray;
         dispatch_async(dispatch_get_main_queue(), ^{
-//            __strong typeof(wLocalItemArray) sLocalItemArray = wLocalItemArray;
         //回到主线程，执行UI刷新操作
             finishBlock(YES, [localItemArray copy]);
         });

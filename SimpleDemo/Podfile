@@ -3,5 +3,6 @@
 
 target 'SimpleDemo' do
   pod 'AFNetworking'
+  pod 'SDWebImage'
 
 end
