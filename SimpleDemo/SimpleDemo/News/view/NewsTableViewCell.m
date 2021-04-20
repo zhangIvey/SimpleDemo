@@ -150,14 +150,13 @@
 //    }];
 //    // 把线程放到线程队列里
 //    [imageLoadQueue addOperation:blockOperation];
-//  警告：不要即把操作添加到操作队列中，又调用操作的start方法，这样是不允许的！否则运行时直接报错。
+//警告：不要即把操作添加到操作队列中，又调用操作的start方法，这样是不允许的！否则运行时直接报错。
 
     
     
 //    ============================================
 //    常使用的第三方框架 SDWebImage
     [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:model.thumbnail_pic_s] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        
     }];
     
 }

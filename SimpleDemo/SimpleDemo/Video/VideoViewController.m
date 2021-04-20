@@ -7,6 +7,7 @@
 //
 
 #import "VideoViewController.h"
+#import "VideoViewCell.h"
 
 @interface VideoViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -33,13 +34,13 @@
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.minimumLineSpacing = 20;
         flowLayout.minimumInteritemSpacing = 20;
-        flowLayout.itemSize = CGSizeMake((self.view.bounds.size.width-20)/2, 300);
-
+//        flowLayout.itemSize = CGSizeMake((self.view.bounds.size.width-20)/2, 300);
+        flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width,self.view.bounds.size.width/16*9);
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
         collectionView.backgroundColor = [UIColor whiteColor];
         collectionView.delegate = self;
         collectionView.dataSource = self;
-        [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"videoCell"];
+        [collectionView registerClass:[VideoViewCell class] forCellWithReuseIdentifier:@"videoCell"];
         collectionView;
     })];
     
@@ -55,8 +56,8 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"videoCell" forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[UICollectionViewCell alloc] init];
+    if ([cell isKindOfClass:[VideoViewCell class]]) {
+        [(VideoViewCell *)cell layoutWithVideoConverURL:@"videoConver@2x" videoURL:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
     }
     cell.backgroundColor = [UIColor redColor];
     
@@ -67,11 +68,11 @@
 #pragma mark -UICollectionViewDelegateFlowLayout's methods
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row%3 == 0) {
-        return CGSizeMake(self.view.bounds.size.width,100);
-
-    }
-    return CGSizeMake((self.view.bounds.size.width-20)/2, 300);
+//    if (indexPath.row%3 == 0) {
+        return CGSizeMake(self.view.bounds.size.width,self.view.bounds.size.width/16*9);
+//
+//    }
+//    return CGSizeMake((self.view.bounds.size.width-20)/2, 300);
 }
 
 
