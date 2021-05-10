@@ -173,7 +173,7 @@
 
     ]];
     
-    NSString *vflString = @"H:|-15-[_headPhotoImgView]-0-[_headPhotoLabel]-(>=0)-[_commentImgView]-0-[_commentLabel]-15-[_praiseImgView]-0-[_praiseLabel]-15-[_shareImgView]-0-[_shareLabel]-15-|";
+    NSString *vflString = @"H:|-15-[_headPhotoImgView]-0-[_headPhotoLabel]-(>=0)-[_commentImgView(==_headPhotoImgView)]-0-[_commentLabel(==_headPhotoLabel)]-15-[_praiseImgView(==_commentImgView)]-0-[_praiseLabel(==_commentLabel)]-15-[_shareImgView(==_praiseImgView)]-0-[_shareLabel(==_praiseLabel)]-15-|";
     [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:vflString options:NSLayoutFormatAlignAllCenterY metrics:nil views:NSDictionaryOfVariableBindings(_headPhotoImgView,_headPhotoLabel,_commentImgView,_commentLabel,_praiseImgView,_praiseLabel,_shareImgView,_shareLabel)]];
     
 }
