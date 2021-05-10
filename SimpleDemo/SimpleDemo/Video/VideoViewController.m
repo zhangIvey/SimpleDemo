@@ -8,6 +8,7 @@
 
 #import "VideoViewController.h"
 #import "VideoViewCell.h"
+#import "VDTabBarView.h"
 
 @interface VideoViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -35,7 +36,7 @@
         flowLayout.minimumLineSpacing = 20;
         flowLayout.minimumInteritemSpacing = 20;
 //        flowLayout.itemSize = CGSizeMake((self.view.bounds.size.width-20)/2, 300);
-        flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width,self.view.bounds.size.width/16*9);
+        flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width,self.view.bounds.size.width/16*9 + tabBarViewHeight);
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
         collectionView.backgroundColor = [UIColor whiteColor];
         collectionView.delegate = self;
@@ -69,7 +70,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 //    if (indexPath.row%3 == 0) {
-        return CGSizeMake(self.view.bounds.size.width,self.view.bounds.size.width/16*9);
+        return CGSizeMake(self.view.bounds.size.width,self.view.bounds.size.width/16*9 + tabBarViewHeight);
 //
 //    }
 //    return CGSizeMake((self.view.bounds.size.width-20)/2, 300);
