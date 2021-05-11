@@ -26,7 +26,7 @@ static inline NSInteger AdapteUI(float x)
 {
 //    1 - 分机型 返回特定的比例
     
-//    2 - 以一款机型为标准，通过比例进行换算 (此处以 宽414 为标准尺寸)
+//    2 - 以iPhone12 款机型为标准，通过比例进行换算 (此处以 宽390 为标准尺寸)
     
     CGFloat scale = 390 / CURRENT_WIDTH ;
     
