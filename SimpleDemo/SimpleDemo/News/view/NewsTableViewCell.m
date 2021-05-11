@@ -31,7 +31,7 @@
     if (self) {
         
         [self.contentView addSubview:({
-            self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 270, 70)];
+            self.titleLabel = [[UILabel alloc] initWithFrame:RECTADAPTER(20, 10, 270, 70)];
             self.titleLabel.numberOfLines = 2;
             self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
             self.titleLabel.font = [UIFont systemFontOfSize:18];

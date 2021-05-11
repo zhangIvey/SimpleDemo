@@ -15,6 +15,7 @@
 		3AA43251256DFE2700F83CD3 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43250256DFE2700F83CD3 /* NewsDetailViewController.m */; };
 		3AA43255256E2F2A00F83CD3 /* RecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */; };
 		3AA43259256E47BE00F83CD3 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43258256E47BE00F83CD3 /* NewsTableViewCell.m */; };
+		3AB8BA7B264A570D00602E38 /* UIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB8BA7A264A570D00602E38 /* UIAdapter.m */; };
 		3ACA24C425BA756300EB7BE1 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA24C325BA756300EB7BE1 /* NewsModel.m */; };
 		3ACEAC9F2635427B009F6E70 /* SDPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEAC9E2635427B009F6E70 /* SDPlayer.m */; };
 		3ACEACA326395919009F6E70 /* VDTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEACA226395919009F6E70 /* VDTabBarView.m */; };
@@ -55,6 +56,8 @@
 		3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommandViewController.m; sourceTree = "<group>"; };
 		3AA43257256E47BE00F83CD3 /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
 		3AA43258256E47BE00F83CD3 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		3AB8BA79264A570D00602E38 /* UIAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIAdapter.h; sourceTree = "<group>"; };
+		3AB8BA7A264A570D00602E38 /* UIAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIAdapter.m; sourceTree = "<group>"; };
 		3ACA24C225BA756300EB7BE1 /* NewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		3ACA24C325BA756300EB7BE1 /* NewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		3ACEAC9D2635427B009F6E70 /* SDPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPlayer.h; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				3AA43258256E47BE00F83CD3 /* NewsTableViewCell.m */,
 				3A3563B52575CF4700B38AD1 /* FCview.h */,
 				3A3563B62575CF4700B38AD1 /* FCview.m */,
+				3AB8BA79264A570D00602E38 /* UIAdapter.h */,
+				3AB8BA7A264A570D00602E38 /* UIAdapter.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				3AA43259256E47BE00F83CD3 /* NewsTableViewCell.m in Sources */,
 				3AA43255256E2F2A00F83CD3 /* RecommandViewController.m in Sources */,
 				3A33973725B16D8D0038245C /* ListLoader.m in Sources */,
+				3AB8BA7B264A570D00602E38 /* UIAdapter.m in Sources */,
 				3ACA24C425BA756300EB7BE1 /* NewsModel.m in Sources */,
 				3AA43251256DFE2700F83CD3 /* NewsDetailViewController.m in Sources */,
 				75ADB91F239F724D0095AE96 /* AppDelegate.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIAdapter.h"
 @class NewsModel;
 
 NS_ASSUME_NONNULL_BEGIN

@@ -34,7 +34,6 @@
         //回到主线程，执行UI刷新操作
             finishBlock(YES, [localItemArray copy]);
         });
-        
         return;
         
     }
