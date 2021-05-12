@@ -8,6 +8,8 @@
 
 #import "NewsDetailViewController.h"
 #import <WebKit/WebKit.h>
+#import "UIAdapter.h"
+
 
 @interface NewsDetailViewController ()<WKNavigationDelegate>
 
@@ -42,13 +44,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:({
-        self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, STATEBARHEIGHT, self.view.bounds.size.width, self.view.bounds.size.height - STATEBARHEIGHT)];
         self.webView.navigationDelegate = self;
         [self.webView loadRequest:({
             NSURL *url = [NSURL URLWithString:self.URLString];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             request;
-            
         })];
         
         //添加观察者监听
@@ -60,7 +61,7 @@
     
     
     [self.view addSubview:({
-        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 88, self.view.bounds.size.width, 20)];
+        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, STATEBARHEIGHT+44, self.view.bounds.size.width, 20)];
         // 自定义状态颜色 默认是灰色变成蓝色
 //        self.progressView.backgroundColor = [UIColor redColor];
 //        self.progressView.progressTintColor = [UIColor greenColor];
