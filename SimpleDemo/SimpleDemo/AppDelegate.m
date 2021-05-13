@@ -12,12 +12,18 @@
 #import "NewsViewController.h"
 #import "VideoViewController.h"
 #import "RecommandViewController.h"
+#import "StartTheView.h"
 
 @interface AppDelegate ()<UISceneDelegate>
 
 @end
 
 @implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey,id> *)launchOptions
+{
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -44,9 +50,39 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    
+    [self.window addSubview:({
+        StartTheView *adView = [[StartTheView alloc] initWithFrame:self.window.bounds];
+        adView;
+    })];
+    
+    
     return YES;
     
+
 }
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    
+    
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    
+}
+
 /*
 #pragma mark - UISceneDelegate delegate methods
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions

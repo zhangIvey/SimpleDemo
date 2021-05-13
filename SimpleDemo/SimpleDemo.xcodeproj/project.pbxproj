@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A02DF6A264CFE4800672BCE /* StartTheView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A02DF69264CFE4800672BCE /* StartTheView.m */; };
 		3A09C3EA2609979800B509CB /* VideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A09C3E92609979800B509CB /* VideoViewCell.m */; };
 		3A09C3F02609C86600B509CB /* videoConver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A09C3EE2609C86600B509CB /* videoConver@2x.png */; };
 		3A09C3F12609C86600B509CB /* videoPlayer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A09C3EF2609C86600B509CB /* videoPlayer@2x.png */; };
@@ -34,7 +35,6 @@
 		75ADB922239F724D0095AE96 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB921239F724D0095AE96 /* SceneDelegate.m */; };
 		75ADB925239F724D0095AE96 /* MineHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB924239F724D0095AE96 /* MineHomeViewController.m */; };
 		75ADB92A239F72680095AE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB929239F72680095AE96 /* Assets.xcassets */; };
-		75ADB92D239F72680095AE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB92B239F72680095AE96 /* LaunchScreen.storyboard */; };
 		75ADB930239F72680095AE96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ADB92F239F72680095AE96 /* main.m */; };
 		75ADB937239F8B430095AE96 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75ADB936239F8B3F0095AE96 /* icon.bundle */; };
 		F425C4764B6797E4B65F66D4 /* libPods-SimpleDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5AB084974AA242659A1EE1 /* libPods-SimpleDemo.a */; };
@@ -42,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		2BB6308FDBEB342F8C59AD1D /* Pods-SimpleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDemo/Pods-SimpleDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3A02DF68264CFE4800672BCE /* StartTheView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartTheView.h; sourceTree = "<group>"; };
+		3A02DF69264CFE4800672BCE /* StartTheView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartTheView.m; sourceTree = "<group>"; };
 		3A09C3E82609979800B509CB /* VideoViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewCell.h; sourceTree = "<group>"; };
 		3A09C3E92609979800B509CB /* VideoViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewCell.m; sourceTree = "<group>"; };
 		3A09C3EE2609C86600B509CB /* videoConver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoConver@2x.png"; sourceTree = "<group>"; };
@@ -85,7 +87,6 @@
 		75ADB923239F724D0095AE96 /* MineHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHomeViewController.h; sourceTree = "<group>"; };
 		75ADB924239F724D0095AE96 /* MineHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHomeViewController.m; sourceTree = "<group>"; };
 		75ADB929239F72680095AE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		75ADB92C239F72680095AE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75ADB92E239F72680095AE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75ADB92F239F72680095AE96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75ADB936239F8B3F0095AE96 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
@@ -105,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A02DF67264CFDDB00672BCE /* StartThe */ = {
+			isa = PBXGroup;
+			children = (
+				3A02DF68264CFE4800672BCE /* StartTheView.h */,
+				3A02DF69264CFE4800672BCE /* StartTheView.m */,
+			);
+			path = StartThe;
+			sourceTree = "<group>";
+		};
 		3A09C3E72609977700B509CB /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +257,7 @@
 		75ADB91C239F724C0095AE96 /* SimpleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3A02DF67264CFDDB00672BCE /* StartThe */,
 				3A33973225B026F80038245C /* MineHome */,
 				3A33973025B026800038245C /* Recommand */,
 				3A33972F25B0266C0038245C /* Video */,
@@ -257,7 +268,6 @@
 				75ADB920239F724D0095AE96 /* SceneDelegate.h */,
 				75ADB921239F724D0095AE96 /* SceneDelegate.m */,
 				75ADB929239F72680095AE96 /* Assets.xcassets */,
-				75ADB92B239F72680095AE96 /* LaunchScreen.storyboard */,
 				75ADB92E239F72680095AE96 /* Info.plist */,
 				75ADB92F239F72680095AE96 /* main.m */,
 			);
@@ -334,7 +344,6 @@
 				3ACEACB52639619A009F6E70 /* icon.png in Resources */,
 				3ACEACB62639619A009F6E70 /* search@3x.png in Resources */,
 				75ADB937239F8B430095AE96 /* icon.bundle in Resources */,
-				75ADB92D239F72680095AE96 /* LaunchScreen.storyboard in Resources */,
 				3ACEACB42639619A009F6E70 /* search@3x-2.png in Resources */,
 				3ACEACAE2639619A009F6E70 /* share@2x.png in Resources */,
 				3A09C3F12609C86600B509CB /* videoPlayer@2x.png in Resources */,
@@ -394,23 +403,13 @@
 				75ADB930239F72680095AE96 /* main.m in Sources */,
 				3A09C3EA2609979800B509CB /* VideoViewCell.m in Sources */,
 				75ADB922239F724D0095AE96 /* SceneDelegate.m in Sources */,
+				3A02DF6A264CFE4800672BCE /* StartTheView.m in Sources */,
 				3ACEACA326395919009F6E70 /* VDTabBarView.m in Sources */,
 				3A3563B72575CF4700B38AD1 /* FCview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		75ADB92B239F72680095AE96 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				75ADB92C239F72680095AE96 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		75ADB931239F72680095AE96 /* Debug */ = {
@@ -532,6 +531,7 @@
 			baseConfigurationReference = 81BB733AEE03E09CC0E5485D /* Pods-SimpleDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -549,6 +549,7 @@
 			baseConfigurationReference = 2BB6308FDBEB342F8C59AD1D /* Pods-SimpleDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

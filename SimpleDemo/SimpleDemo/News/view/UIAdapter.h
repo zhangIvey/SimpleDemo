@@ -19,8 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-
-
 #define IS_PHONE_X ( CURRENT_WIDTH == [UIAdapter sizeFor58Inch].width && CURRENT_HEIGHT == [UIAdapter sizeFor58Inch].height )
 #define IS_PHONE_XS ( CURRENT_WIDTH == [UIAdapter sizeFor58Inch].width && CURRENT_HEIGHT == [UIAdapter sizeFor58Inch].height )
 #define IS_PHONE_XR ( CURRENT_WIDTH == [UIAdapter sizeFor61Inch].width && CURRENT_HEIGHT == [UIAdapter sizeFor61Inch].height )
