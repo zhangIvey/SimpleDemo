@@ -55,12 +55,18 @@
         StartTheView *adView = [[StartTheView alloc] initWithFrame:self.window.bounds];
         adView;
     })];
-    
-    
     return YES;
-    
-
 }
+
+// 当通过URL Scheme 唤起的时候，
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    NSLog(@"openURL = %@",url);
+    NSLog(@"options = %@",options);
+    return YES;;
+    
+}
+
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {

@@ -76,7 +76,24 @@
 - (void)clickBlackView
 {
     NSLog(@"clickBlackView");
+//    打开第三方APP：通过使用URL Scheme (TestURLScheme)
+    NSURL *url = [NSURL URLWithString:@"TestURLScheme://"];
+    // 1 - 先判断要打开的应用是否在手机上安装
+    bool canOpen = [[UIApplication sharedApplication] canOpenURL:url];
+    if (canOpen) {
+        
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+            if (success) {
+                NSLog(@"成功唤起");
+            }else{
+                NSLog(@"出故障了");
+            }
+        }];
+        
+    }
+    
 }
+
 
 #pragma mark - UIScrollViewDelegate's methods
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
