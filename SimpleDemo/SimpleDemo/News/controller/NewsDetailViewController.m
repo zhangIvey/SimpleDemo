@@ -26,7 +26,7 @@
     [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 
-- (instancetype)init
+- (instancetype)initWithURL:(NSString *)URL andTitle:(NSString *)title
 {
     self = [super init];
     if (self) {
@@ -34,6 +34,8 @@
         UIBarButtonItem *shareuttonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享新闻" style:UIBarButtonItemStylePlain target:self action:@selector(toShare)];
         self.navigationItem.rightBarButtonItem = shareuttonItem;
         
+        self.URLString = URL;
+        self.title = title;
         
     }
     return self;

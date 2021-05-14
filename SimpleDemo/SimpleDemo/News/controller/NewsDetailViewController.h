@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, copy, readwrite) NSString *URLString;
 
+- (instancetype)initWithURL:(NSString *)URL andTitle:(NSString *)title;
+
 @end
 
 NS_ASSUME_NONNULL_END
