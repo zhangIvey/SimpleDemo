@@ -12,6 +12,7 @@
 #import "FCview.h"
 #import "ListLoader.h"
 #import "NewsModel.h"
+#import "ZZMedia.h"
 
 
 @interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource, NiewsTableViewCellDelegate>
@@ -92,11 +93,20 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    /**
     NewsDetailViewController *detailViewController = [[NewsDetailViewController alloc] init];
     NewsModel *model = (NewsModel *)[self.dataArray objectAtIndex:indexPath.row];
     detailViewController.title = model.title;
     detailViewController.URLString = model.url;
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    */
+    // 组件化方案一 ：Target-Action 方式实现类之间的解耦
+//    NewsDetailViewController *detailViewController = [[NewsDetailViewController alloc] init];
+    
+    NewsModel *model = (NewsModel *)[self.dataArray objectAtIndex:indexPath.row];
+    __kindof UIViewController *detailViewController = [ZZMedia detailWebWithURL:model.url andTitle:model.title];
+//    detailViewController.title = model.title;
+//    detailViewController.URLString = model.url;
     [self.navigationController pushViewController:detailViewController animated:YES];
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];

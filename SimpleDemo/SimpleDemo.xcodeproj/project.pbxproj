@@ -17,6 +17,7 @@
 		3AA43255256E2F2A00F83CD3 /* RecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43254256E2F2A00F83CD3 /* RecommandViewController.m */; };
 		3AA43259256E47BE00F83CD3 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA43258256E47BE00F83CD3 /* NewsTableViewCell.m */; };
 		3AB8BA7B264A570D00602E38 /* UIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB8BA7A264A570D00602E38 /* UIAdapter.m */; };
+		3AC0A344264E50B00026DE9A /* ZZMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0A343264E50B00026DE9A /* ZZMedia.m */; };
 		3ACA24C425BA756300EB7BE1 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA24C325BA756300EB7BE1 /* NewsModel.m */; };
 		3ACEAC9F2635427B009F6E70 /* SDPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEAC9E2635427B009F6E70 /* SDPlayer.m */; };
 		3ACEACA326395919009F6E70 /* VDTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEACA226395919009F6E70 /* VDTabBarView.m */; };
@@ -60,6 +61,8 @@
 		3AA43258256E47BE00F83CD3 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		3AB8BA79264A570D00602E38 /* UIAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIAdapter.h; sourceTree = "<group>"; };
 		3AB8BA7A264A570D00602E38 /* UIAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIAdapter.m; sourceTree = "<group>"; };
+		3AC0A342264E50B00026DE9A /* ZZMedia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZMedia.h; sourceTree = "<group>"; };
+		3AC0A343264E50B00026DE9A /* ZZMedia.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMedia.m; sourceTree = "<group>"; };
 		3ACA24C225BA756300EB7BE1 /* NewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		3ACA24C325BA756300EB7BE1 /* NewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		3ACEAC9D2635427B009F6E70 /* SDPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPlayer.h; sourceTree = "<group>"; };
@@ -219,6 +222,15 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		3AC0A341264E4FE40026DE9A /* Target-Action */ = {
+			isa = PBXGroup;
+			children = (
+				3AC0A342264E50B00026DE9A /* ZZMedia.h */,
+				3AC0A343264E50B00026DE9A /* ZZMedia.m */,
+			);
+			path = "Target-Action";
+			sourceTree = "<group>";
+		};
 		3ACEAC9C2635425C009F6E70 /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +269,7 @@
 		75ADB91C239F724C0095AE96 /* SimpleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3AC0A341264E4FE40026DE9A /* Target-Action */,
 				3A02DF67264CFDDB00672BCE /* StartThe */,
 				3A33973225B026F80038245C /* MineHome */,
 				3A33973025B026800038245C /* Recommand */,
@@ -403,6 +416,7 @@
 				75ADB930239F72680095AE96 /* main.m in Sources */,
 				3A09C3EA2609979800B509CB /* VideoViewCell.m in Sources */,
 				75ADB922239F724D0095AE96 /* SceneDelegate.m in Sources */,
+				3AC0A344264E50B00026DE9A /* ZZMedia.m in Sources */,
 				3A02DF6A264CFE4800672BCE /* StartTheView.m in Sources */,
 				3ACEACA326395919009F6E70 /* VDTabBarView.m in Sources */,
 				3A3563B72575CF4700B38AD1 /* FCview.m in Sources */,
