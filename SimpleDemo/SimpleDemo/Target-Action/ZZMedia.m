@@ -32,4 +32,43 @@
 }
 
 
+//============================================
+// 创建一个存储来存放 URLScheme 和 block的对应关系
+
++ (NSMutableDictionary *)mediaCache
+{
+    static NSMutableDictionary *cache;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cache = @{}.mutableCopy;
+    });
+    return cache;
+}
+
+// 注册 URLScheme
++(void)registWithScheme:(NSString *)urlSchem processBlock:(ZZMediaProcessBlock)block
+{
+    if (urlSchem && block) {
+        [[self mediaCache] setObject:block forKey:urlSchem];
+    }
+    
+}
+
+
+// 通过 URLScheme 发起调用
++(void)openURL:(NSString *)urlScheme parames:(NSDictionary *)params
+{
+    NSLog(@"URL Scheme方式");
+    if (urlScheme && params) {
+        ZZMediaProcessBlock block = [[self mediaCache] objectForKey:urlScheme];
+        
+        if (block) {
+            block(params);
+        }
+        
+    }
+    
+}
+
+
 @end

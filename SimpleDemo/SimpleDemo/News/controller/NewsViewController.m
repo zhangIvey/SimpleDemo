@@ -100,14 +100,25 @@
     detailViewController.URLString = model.url;
     [self.navigationController pushViewController:detailViewController animated:YES];
     */
-    // 组件化方案一 ：Target-Action 方式实现类之间的解耦
-//    NewsDetailViewController *detailViewController = [[NewsDetailViewController alloc] init];
     
+/*
+ // 组件化方案一 ：Target-Action 方式实现类之间的解耦
     NewsModel *model = (NewsModel *)[self.dataArray objectAtIndex:indexPath.row];
     __kindof UIViewController *detailViewController = [ZZMedia detailWebWithURL:model.url andTitle:model.title];
-//    detailViewController.title = model.title;
-//    detailViewController.URLString = model.url;
     [self.navigationController pushViewController:detailViewController animated:YES];
+ */
+    
+//    组件化方案二：URL Scheme方式
+    NewsModel *model = (NewsModel *)[self.dataArray objectAtIndex:indexPath.row];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:model.url forKey:@"webURL"];
+    [params setObject:model.title forKey:@"title"];
+    [params setObject:self.navigationController forKey:@"controller"];
+    
+    [ZZMedia openURL:@"webDetail://" parames:params];
+    
+    
+    
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [cell setSelected:NO];

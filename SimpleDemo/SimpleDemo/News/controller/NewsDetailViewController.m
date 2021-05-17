@@ -9,6 +9,7 @@
 #import "NewsDetailViewController.h"
 #import <WebKit/WebKit.h>
 #import "UIAdapter.h"
+#import "ZZMedia.h"
 
 
 @interface NewsDetailViewController ()<WKNavigationDelegate>
@@ -19,6 +20,20 @@
 @end
 
 @implementation NewsDetailViewController
+
+
++ (void)load
+{
+    // 将 类 注册到URLScheme中
+    [ZZMedia registWithScheme:@"webDetail://" processBlock:^(NSDictionary * _Nonnull params) {
+        NSString *webURL = [params objectForKey:@"webURL"];
+        NSString *title = [params objectForKey:@"title"];
+        UINavigationController *navigationController = [params objectForKey:@"controller"];
+        
+        NewsDetailViewController *viewControler = [[NewsDetailViewController alloc] initWithURL:webURL andTitle:title];
+        [navigationController pushViewController:viewControler animated:YES];
+    }];
+}
 
 - (void)dealloc
 {
