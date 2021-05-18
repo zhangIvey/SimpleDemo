@@ -22,16 +22,17 @@
 @implementation NewsDetailViewController
 
 
-+ (void)load
++(void)load
 {
-    // 将 类 注册到URLScheme中
-    [ZZMedia registWithScheme:@"webDetail://" processBlock:^(NSDictionary * _Nonnull params) {
-        NSString *webURL = [params objectForKey:@"webURL"];
+    // 用于在URLScheme方案中进行事务的注册
+    [ZZMedia registURLScheme:@"detailWeb://" processBlock:^(NSMutableDictionary * _Nonnull params) {
+        NSString *url = [params objectForKey:@"url"];
         NSString *title = [params objectForKey:@"title"];
         UINavigationController *navigationController = [params objectForKey:@"controller"];
         
-        NewsDetailViewController *viewControler = [[NewsDetailViewController alloc] initWithURL:webURL andTitle:title];
-        [navigationController pushViewController:viewControler animated:YES];
+        NewsDetailViewController *detailViewController = [[NewsDetailViewController alloc] initWithURL:url andTitle:title];
+        [navigationController pushViewController:detailViewController animated:YES];
+        
     }];
 }
 

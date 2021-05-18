@@ -111,11 +111,11 @@
 //    组件化方案二：URL Scheme方式
     NewsModel *model = (NewsModel *)[self.dataArray objectAtIndex:indexPath.row];
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setObject:model.url forKey:@"webURL"];
+    [params setObject:model.url forKey:@"url"];
     [params setObject:model.title forKey:@"title"];
     [params setObject:self.navigationController forKey:@"controller"];
     
-    [ZZMedia openURL:@"webDetail://" parames:params];
+    [ZZMedia openURL:@"detailWeb://" params:params];
     
     
     
