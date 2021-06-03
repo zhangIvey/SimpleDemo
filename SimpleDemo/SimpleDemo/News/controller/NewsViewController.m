@@ -12,7 +12,7 @@
 #import "FCview.h"
 #import "ListLoader.h"
 #import "NewsModel.h"
-#import "ZZMedia.h"
+
 
 
 @interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource, NiewsTableViewCellDelegate>
@@ -93,7 +93,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /**
+    /*
     NewsDetailViewController *detailViewController = [[NewsDetailViewController alloc] init];
     NewsModel *model = (NewsModel *)[self.dataArray objectAtIndex:indexPath.row];
     detailViewController.title = model.title;
@@ -109,6 +109,7 @@
  */
     
 //    组件化方案二：URL Scheme方式
+    /*
     NewsModel *model = (NewsModel *)[self.dataArray objectAtIndex:indexPath.row];
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setObject:model.url forKey:@"url"];
@@ -116,10 +117,12 @@
     [params setObject:self.navigationController forKey:@"controller"];
     
     [ZZMedia openURL:@"detailWeb://" params:params];
+     */
     
-    
-    
-    
+//    组件化方案三：Protocol - class 方式
+    NewsModel *model = (NewsModel *)[self.dataArray objectAtIndex:indexPath.row];
+    Class class =  [ZZMedia classFromProtol:@protocol(ZZDetailWebViewProtocol)];
+    [self.navigationController pushViewController:[[class alloc] detailWebWithURL:(NSString *)model.url andTitle:model.title] animated:YES];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [cell setSelected:NO];
 }
@@ -143,7 +146,6 @@
    
     return cell;
 }
-
 
 /*
 #pragma mark - Navigation

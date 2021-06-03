@@ -9,7 +9,7 @@
 #import "NewsDetailViewController.h"
 #import <WebKit/WebKit.h>
 #import "UIAdapter.h"
-#import "ZZMedia.h"
+
 
 
 @interface NewsDetailViewController ()<WKNavigationDelegate>
@@ -19,12 +19,14 @@
 @property(nonatomic, strong, readwrite) UIProgressView *progressView;
 @end
 
+
 @implementation NewsDetailViewController
 
 
 +(void)load
 {
     // 用于在URLScheme方案中进行事务的注册
+    /*
     [ZZMedia registURLScheme:@"detailWeb://" processBlock:^(NSMutableDictionary * _Nonnull params) {
         NSString *url = [params objectForKey:@"url"];
         NSString *title = [params objectForKey:@"title"];
@@ -32,9 +34,14 @@
         
         NewsDetailViewController *detailViewController = [[NewsDetailViewController alloc] initWithURL:url andTitle:title];
         [navigationController pushViewController:detailViewController animated:YES];
-        
     }];
+     */
+    
+    // 用于在Protocol方案中进行 类的 注册
+    [ZZMedia registProtocol:@protocol(ZZDetailWebViewProtocol) andClass:[self class]];
 }
+
+
 
 - (void)dealloc
 {
@@ -126,5 +133,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (__kindof UIViewController *)detailWebWithURL:(NSString *)webURL andTitle:(NSString *)title
+{
+    UIViewController *viewController = [[[self class] alloc] performSelector:NSSelectorFromString(@"initWithURL:andTitle:") withObject:webURL withObject:title];
+    return viewController;
+}
+
 
 @end

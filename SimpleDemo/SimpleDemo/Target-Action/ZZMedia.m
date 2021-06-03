@@ -7,7 +7,6 @@
 //
 
 #import "ZZMedia.h"
-//#import "NewsDetailViewController.h"
 
 @implementation ZZMedia
     
@@ -61,5 +60,26 @@
     }
 }
 
+//============================================
+    // 注册 Protocol - class 关系
++ (void)registProtocol:(Protocol *)protocol andClass:(Class)className
+{
+    if (protocol && className) {
+        [[[self class] _mediaCache] setObject:NSStringFromClass(className) forKey:NSStringFromProtocol(protocol)];
+    }
+    
+}
+    // 通过 Protocol 唤起调用
++ (Class)classFromProtol:(Protocol *)protocol
+{
+    return NSClassFromString([[[self class] _mediaCache] objectForKey:NSStringFromProtocol(protocol)]);
+}
+
+//+ (__kindof UIViewController *_Nonnull) detailWebForProtocolWithURL:(NSString *_Nullable)webURL andTitle:(NSString *_Nullable)title
+//{
+//    Class claasName = NSClassFromString(@"NewsDetailViewController");
+//    UIViewController *viewController = [[claasName alloc] performSelector:NSSelectorFromString(@"initWithURL:andTitle:") withObject:webURL withObject:title];
+//    return viewController;;
+//}
 
 @end
