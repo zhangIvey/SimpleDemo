@@ -13,7 +13,6 @@
 
 @protocol ZZDetailWebViewProtocol <NSObject>
 
-//- (__kindof UIViewController *) detailWebForProtocolWithURL:(NSString *)webURL andTitle:(NSString *)title;
 -(__kindof UIViewController *) detailWebWithURL:(NSString *)webURL andTitle:(NSString *)title;
 
 @end

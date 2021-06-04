@@ -14,6 +14,9 @@
 #import "RecommandViewController.h"
 #import "StartTheView.h"
 
+#import "ZZFramework/ZZBussness.h"
+#import <ZZFrameWork/ZZService.h>
+
 @interface AppDelegate ()<UISceneDelegate>
 
 @end
@@ -55,6 +58,16 @@
         StartTheView *adView = [[StartTheView alloc] initWithFrame:self.window.bounds];
         adView;
     })];
+    
+    // 静态库的使用
+    ZZBussness *bussness = [[ZZBussness alloc] init];
+    [bussness testBussness];
+    
+    
+    //动态库的使用
+    ZZService *service = [[ZZService alloc] init];
+    [service testService];
+    
     return YES;
 }
 
